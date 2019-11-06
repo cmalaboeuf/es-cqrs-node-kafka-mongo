@@ -1,0 +1,17 @@
+{
+  "name": "cqrs-event-sourcing-node-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "christophe.malaboeuf@gmail.com",
+  "license": "MIT",
+  "scripts" : {
+    "start": "nodemon producer.js"
+  },
+  "dependencies": {
+    "bluebird": "^3.7.1",
+    "kafka-node": "^5.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
+}

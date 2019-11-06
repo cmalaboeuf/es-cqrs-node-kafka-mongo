@@ -1,4 +1,4 @@
-version: "2.1"
+version: "3.7"
 
 services:
   zoo1:
@@ -31,3 +31,10 @@ services:
       - ./kafka1/data:/var/lib/kafka/data
     depends_on:
       - zoo1
+
+  mongodb:
+    image: mongo:4.0.10
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./mongo-data:/data/db
