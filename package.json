@@ -4,14 +4,25 @@
   "main": "index.js",
   "author": "christophe.malaboeuf@gmail.com",
   "license": "MIT",
-  "scripts" : {
-    "start": "nodemon producer.js"
+  "scripts": {
+    "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
+    "build": "tsc",
+    "start:dev": "tsc -w & nodemon dist/server.js",
+    "test": "jest --detectOpenHandles src/**/*.spec.ts"
   },
   "dependencies": {
+    "@types/supertest": "^2.0.8",
     "bluebird": "^3.7.1",
-    "kafka-node": "^5.0.0"
+    "kafka-node": "^5.0.0",
+    "typescript": "^3.7.2"
   },
   "devDependencies": {
-    "nodemon": "^1.19.4"
+    "@types/jest": "^24.0.23",
+    "express": "^4.17.1",
+    "jest": "^24.9.0",
+    "nodemon": "^1.19.4",
+    "supertest": "^4.0.2",
+    "ts-jest": "^24.1.0",
+    "tslint": "^5.20.1"
   }
 }
